@@ -646,12 +646,16 @@ function createLegend(){
 				for (var i=0; i<leaderLines.length; i++) {
 					var sl = leaderLines[i];
 					var run = [sl];
+					var prevMaxY = Math.max(sl.y1, sl.y2);
 					if (sl.y1 != sl.y2) {
 						while (i < leaderLines.length - 1) {
 						  var sl_ = leaderLines[i + 1];
-							if ((sl.y1 - sl.y2 < 0) != (sl_.y1 - sl_.y2 < 0)) 
+							if (sl_.y1 == sl_.y2 ||
+							    (sl.y1 - sl.y2 < 0) != (sl_.y1 - sl_.y2 < 0) ||
+									Math.min(sl_.y1, sl_.y2) > prevMaxY + 2)
 								break;
 							run.push(sl_);
+							prevMaxY = Math.max(sl_.y1, sl_.y2);
 							i++;
 						}
 					}
@@ -660,7 +664,7 @@ function createLegend(){
 					for (var j=0; j<run.length; j++) { var sl_ = run[j];
 						var x2 = sl_.x3 - 6;
 						if (run.length > 1) {
-							var verticalLineWidth = Math.min(run.length * 1.5, 7);
+							var verticalLineWidth = Math.min((run.length - 1) * 2, 7);
 						  x2 = x2 + verticalLineWidth * j / (run.length - 1) - verticalLineWidth / 2;
 						}
 						addSteppedLine(svg, sl_.x1, x2, sl_.x3, sl_.y1, sl_.y2);
