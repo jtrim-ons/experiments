@@ -5,7 +5,7 @@ var dvc = {
             "dateFormat":"%b-%y",
             "legendStyle": "line",
             "directLabeling" : true,
-            "directLabelingAdjust" : [{"x": 0, "y": 0},{"x": 0, "y": 7},{"x": 0, "y": -43}],
+            "directLabelingAdjust" : [{"x": 0, "y":20},{"x": 0, "y": -20},{"x": 0, "y": -10},{"x": 0, "y": -8},{"x": 0, "y": 0},{"x": 0, "y": 14},{"x": 0, "y": -40}],
             "directLabelLeaderLineLength" : 15,
             "colour_palette": ["#206095","#27A0CC","#003C57","#118C7B","#A8BD3A","#871A5B","#F66068","#746CB1","#22D0B6"],
             // for darker text required by accessibility rules on colour contrast
