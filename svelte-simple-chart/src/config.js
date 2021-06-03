@@ -1,7 +1,6 @@
 export default {
         "config0": {
                 "essential": {
-                        "graphic_data_url": "data.csv",
                         "screenreadertext": "", //will replace default screenreader text - use if fuller description needed
                         "dateFormat": "%b-%y",
                         "legendStyle": "line",
@@ -87,7 +86,6 @@ export default {
         },
         "config1": {
                 "essential": {
-                        "graphic_data_url": "data.csv",
                         "screenreadertext": "", //will replace default screenreader text - use if fuller description needed
                         "dateFormat": "%b-%y",
                         "legendStyle": "line",

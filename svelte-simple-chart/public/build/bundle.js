@@ -20503,181 +20503,6 @@ var app = (function () {
     		}
     	}
 
-    var config = {
-            "config0": {
-                    "essential": {
-                            "graphic_data_url": "data.csv",
-                            "screenreadertext": "", //will replace default screenreader text - use if fuller description needed
-                            "dateFormat": "%b-%y",
-                            "legendStyle": "line",
-                            "directLabeling": true,
-                            "directLabelingAdjust": [{ "x": 0, "y": 0 }, { "x": 0, "y": 7 }, { "x": 0, "y": -43 }],
-                            "colour_palette": ["#206095", "#27A0CC", "#003C57", "#118C7B", "#A8BD3A", "#871A5B", "#F66068", "#746CB1", "#22D0B6"],
-                            // for darker text required by accessibility rules on colour contrast
-                            "colour_palette_labels": ["#206095", "#057FAC", "#003C57", "#118C7B", "#8A9B2E", "#871A5B", "#F66068", "#746CB1", "#1AA590"],
-                            "sourceText": ["Office for National Statistics"],
-                            "sourceURL": ["http://www.ons.gov.uk"],
-                            "draggable": false,
-                            "annotationsChart": [
-                                    // {
-                                    //   "xVal": "2003-06-23T00:00:00.000Z",
-                                    //   "yVal": 160,
-                                    //   "path": "",
-                                    //   "text": "Lorem ipsum dolor sit amet, consectetur",
-                                    //   "textOffset": [0,0]
-                                    // },
-                                    //
-                                    // {
-                                    //   "xVal": "1995-06-23T00:00:00.000Z",
-                                    //   "yVal": 120,
-                                    //   "path": "",
-                                    //   "text": "adipiscing elit, sed do eiusmod",
-                                    //   "textOffset": [0,0]
-                                    // },
-                                    //
-                                    // {
-                                    //   "xVal": "2011-06-01T00:00:00.000Z",
-                                    //   "yVal": 60,
-                                    //   "path": "",
-                                    //   "text": "incididunt ut labore et dolor",
-                                    //   "textOffset": [0,0]
-                                    // }
-                            ],
-
-                            "wordwrap": [30, 20, 10],
-                            "annoAlign": ["middle", "middle", "end"],
-                            "annotationBullet": [/*"An annotation","Another annotation"*/],
-
-                            "circles": false,
-                            // "annotationCXCY":[
-                            //     ["Jan-93","68.4"],
-                            //     ["Jan-08","73"]
-                            // ],
-                            //"annotationColour": ["green"],
-
-                            "yAxisLabel": "%",
-                            "yAxisScale": "auto_zero_max", //Options: auto_min_max, auto_zero_max, or specify array eg [-20,100]
-                            "yAxisBreak": false,
-                            "yAxisBreak_sm_md_lg": [65, 65, 65]
-                    },
-
-                    "optional": {
-                            "margin_sm": [30, 10, 25, 35], //[top,right,bottom,left]
-                            "margin_md": [30, 82, 25, 35],
-                            "margin_lg": [10, 82, 25, 35],
-
-                            "aspectRatio_sm": [16, 13],
-                            "aspectRatio_md": [16, 12],
-                            "aspectRatio_lg": [16, 10],
-
-                            "mobileBreakpoint": 414,
-
-                            "xAxisTextFormat_sm_md_lg": ["%y", "%Y", "%b %y"],
-
-                            "x_num_ticks_sm_md_lg": [6, 9, 9],
-                            "y_num_ticks_sm_md_lg": [5, 11, 11],
-
-                            "lineMarkers": true,
-
-                            "vertical_line": true,
-                            "annotateLineX1_Y1_X2_Y2": [/* [["Jul-00", "200"],["Jul-00", "0"]], [["Jul-08", "100"],["Jul-08", "200"]] */],
-
-                            "annotateRect": true,
-                            "annotateRectX_Y": [/* [["Jan-94", 200],["Jan-96", 0]], [["Jul-04", 180],["Jul-06", 40]]*/],
-                            "lineColor_opcty": [["#ABCDEF", 0.2], ["#888", 0.4]],
-
-                            "centre_line": false,
-                            "centre_line_value": 25
-                    }
-            },
-            "config1": {
-                    "essential": {
-                            "graphic_data_url": "data.csv",
-                            "screenreadertext": "", //will replace default screenreader text - use if fuller description needed
-                            "dateFormat": "%b-%y",
-                            "legendStyle": "line",
-                            "directLabeling": true,
-                            "directLabelingAdjust": [{ "x": 0, "y": 0 }, { "x": 0, "y": 7 }, { "x": 0, "y": -43 }],
-                            "colour_palette": ["red", "green", "blue", "#118C7B", "#A8BD3A", "#871A5B", "#F66068", "#746CB1", "#22D0B6"],
-                            // for darker text required by accessibility rules on colour contrast
-                            "colour_palette_labels": ["red", "green", "blue", "#118C7B", "#8A9B2E", "#871A5B", "#F66068", "#746CB1", "#1AA590"],
-                            "sourceText": ["Office for National Statistics"],
-                            "sourceURL": ["http://www.ons.gov.uk"],
-                            "draggable": false,
-                            "annotationsChart": [
-                                    // {
-                                    //   "xVal": "2003-06-23T00:00:00.000Z",
-                                    //   "yVal": 160,
-                                    //   "path": "",
-                                    //   "text": "Lorem ipsum dolor sit amet, consectetur",
-                                    //   "textOffset": [0,0]
-                                    // },
-                                    //
-                                    // {
-                                    //   "xVal": "1995-06-23T00:00:00.000Z",
-                                    //   "yVal": 120,
-                                    //   "path": "",
-                                    //   "text": "adipiscing elit, sed do eiusmod",
-                                    //   "textOffset": [0,0]
-                                    // },
-                                    //
-                                    // {
-                                    //   "xVal": "2011-06-01T00:00:00.000Z",
-                                    //   "yVal": 60,
-                                    //   "path": "",
-                                    //   "text": "incididunt ut labore et dolor",
-                                    //   "textOffset": [0,0]
-                                    // }
-                            ],
-
-                            "wordwrap": [30, 20, 10],
-                            "annoAlign": ["middle", "middle", "end"],
-                            "annotationBullet": [/*"An annotation","Another annotation"*/],
-
-                            "circles": false,
-                            // "annotationCXCY":[
-                            //     ["Jan-93","68.4"],
-                            //     ["Jan-08","73"]
-                            // ],
-                            //"annotationColour": ["green"],
-
-                            "yAxisLabel": "%",
-                            "yAxisScale": "auto_zero_max", //Options: auto_min_max, auto_zero_max, or specify array eg [-20,100]
-                            "yAxisBreak": false,
-                            "yAxisBreak_sm_md_lg": [65, 65, 65]
-                    },
-
-                    "optional": {
-                            "margin_sm": [30, 10, 25, 35], //[top,right,bottom,left]
-                            "margin_md": [30, 82, 25, 35],
-                            "margin_lg": [10, 82, 25, 35],
-
-                            "aspectRatio_sm": [16, 13],
-                            "aspectRatio_md": [16, 12],
-                            "aspectRatio_lg": [16, 10],
-
-                            "mobileBreakpoint": 414,
-
-                            "xAxisTextFormat_sm_md_lg": ["%y", "%Y", "%b %y"],
-
-                            "x_num_ticks_sm_md_lg": [6, 9, 9],
-                            "y_num_ticks_sm_md_lg": [5, 11, 11],
-
-                            "lineMarkers": true,
-
-                            "vertical_line": true,
-                            "annotateLineX1_Y1_X2_Y2": [/* [["Jul-00", "200"],["Jul-00", "0"]], [["Jul-08", "100"],["Jul-08", "200"]] */],
-
-                            "annotateRect": true,
-                            "annotateRectX_Y": [/* [["Jan-94", 200],["Jan-96", 0]], [["Jul-04", 180],["Jul-06", 40]]*/],
-                            "lineColor_opcty": [["#ABCDEF", 0.2], ["#888", 0.4]],
-
-                            "centre_line": false,
-                            "centre_line_value": 25
-                    }
-            }
-    };
-
     /* src/LineChart.svelte generated by Svelte v3.38.2 */
 
     const { Object: Object_1 } = globals;
@@ -20692,7 +20517,7 @@ var app = (function () {
     	let h6;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowresize*/ ctx[3]);
+    	add_render_callback(/*onwindowresize*/ ctx[4]);
 
     	const block = {
     		c: function create() {
@@ -20704,14 +20529,14 @@ var app = (function () {
     			t2 = space();
     			h6 = element("h6");
     			attr_dev(h5, "id", "screenreadertext");
-    			add_location(h5, file$1, 705, 4, 26029);
+    			add_location(h5, file$1, 703, 4, 25947);
     			attr_dev(div0, "class", "visuallyhidden svelte-1n6773c");
-    			add_location(div0, file$1, 704, 0, 25996);
+    			add_location(div0, file$1, 702, 0, 25914);
     			attr_dev(div1, "aria-hidden", "true");
-    			add_location(div1, file$1, 712, 0, 26258);
+    			add_location(div1, file$1, 710, 0, 26176);
     			attr_dev(h6, "id", "source");
     			attr_dev(h6, "class", "svelte-1n6773c");
-    			add_location(h6, file$1, 715, 0, 26357);
+    			add_location(h6, file$1, 713, 0, 26275);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20721,12 +20546,12 @@ var app = (function () {
     			append_dev(div0, h5);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div1, anchor);
-    			/*div1_binding*/ ctx[4](div1);
+    			/*div1_binding*/ ctx[5](div1);
     			insert_dev(target, t2, anchor);
     			insert_dev(target, h6, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(window, "resize", /*onwindowresize*/ ctx[3]);
+    				dispose = listen_dev(window, "resize", /*onwindowresize*/ ctx[4]);
     				mounted = true;
     			}
     		},
@@ -20737,7 +20562,7 @@ var app = (function () {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div1);
-    			/*div1_binding*/ ctx[4](null);
+    			/*div1_binding*/ ctx[5](null);
     			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(h6);
     			mounted = false;
@@ -20763,11 +20588,17 @@ var app = (function () {
     	var keypoints;
     	let graphic_data;
     	let windowWidth;
-    	let { configName } = $$props;
-    	let dvc = config[configName];
+    	let { dvc } = $$props;
+    	let { data } = $$props;
+    	let mounted = false;
+    	graphic_data = data.map(d => Object.assign({}, d));
+
+    	graphic_data.forEach(function (d) {
+    		d.date = timeParse(dvc.essential.dateFormat)(d.date);
+    	});
 
     	function drawGraphic() {
-    		if (!graphic_data) return;
+    		if (!mounted) return; // don't draw graphic until page is loaded
     		let graphic = select(graphicNode);
     		let graphicWidth = parseInt(graphic.style("width"));
     		var threshold_md = 788;
@@ -21151,21 +20982,12 @@ var app = (function () {
     	}
 
     	onMount(async () => {
-    		//load chart data
+    		mounted = true;
     		keypoints = select("#keypoints");
-
-    		csv(dvc.essential.graphic_data_url).then(function (data) {
-    			graphic_data = data;
-
-    			graphic_data.forEach(function (d) {
-    				d.date = timeParse(dvc.essential.dateFormat)(d.date);
-    			});
-
-    			drawGraphic();
-    		});
+    		drawGraphic();
     	});
 
-    	const writable_props = ["configName"];
+    	const writable_props = ["dvc", "data"];
 
     	Object_1.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<LineChart> was created with unknown prop '${key}'`);
@@ -21183,7 +21005,8 @@ var app = (function () {
     	}
 
     	$$self.$$set = $$props => {
-    		if ("configName" in $$props) $$invalidate(2, configName = $$props.configName);
+    		if ("dvc" in $$props) $$invalidate(2, dvc = $$props.dvc);
+    		if ("data" in $$props) $$invalidate(3, data = $$props.data);
     	};
 
     	$$self.$capture_state = () => ({
@@ -21191,13 +21014,13 @@ var app = (function () {
     		d3,
     		wordwrap,
     		swoopyDrag,
-    		config,
     		graphicNode,
     		keypoints,
     		graphic_data,
     		windowWidth,
-    		configName,
     		dvc,
+    		data,
+    		mounted,
     		drawGraphic
     	});
 
@@ -21206,8 +21029,9 @@ var app = (function () {
     		if ("keypoints" in $$props) keypoints = $$props.keypoints;
     		if ("graphic_data" in $$props) graphic_data = $$props.graphic_data;
     		if ("windowWidth" in $$props) $$invalidate(0, windowWidth = $$props.windowWidth);
-    		if ("configName" in $$props) $$invalidate(2, configName = $$props.configName);
-    		if ("dvc" in $$props) dvc = $$props.dvc;
+    		if ("dvc" in $$props) $$invalidate(2, dvc = $$props.dvc);
+    		if ("data" in $$props) $$invalidate(3, data = $$props.data);
+    		if ("mounted" in $$props) mounted = $$props.mounted;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -21217,17 +21041,17 @@ var app = (function () {
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty & /*windowWidth*/ 1) {
     			// redraw the graphic if the window is resized
-    			(drawGraphic());
+    			windowWidth && drawGraphic();
     		}
     	};
 
-    	return [windowWidth, graphicNode, configName, onwindowresize, div1_binding];
+    	return [windowWidth, graphicNode, dvc, data, onwindowresize, div1_binding];
     }
 
     class LineChart extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init$1(this, options, instance$1, create_fragment$1, safe_not_equal, { configName: 2 });
+    		init$1(this, options, instance$1, create_fragment$1, safe_not_equal, { dvc: 2, data: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -21239,19 +21063,305 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*configName*/ ctx[2] === undefined && !("configName" in props)) {
-    			console.warn("<LineChart> was created without expected prop 'configName'");
+    		if (/*dvc*/ ctx[2] === undefined && !("dvc" in props)) {
+    			console.warn("<LineChart> was created without expected prop 'dvc'");
+    		}
+
+    		if (/*data*/ ctx[3] === undefined && !("data" in props)) {
+    			console.warn("<LineChart> was created without expected prop 'data'");
     		}
     	}
 
-    	get configName() {
+    	get dvc() {
     		throw new Error("<LineChart>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set configName(value) {
+    	set dvc(value) {
+    		throw new Error("<LineChart>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get data() {
+    		throw new Error("<LineChart>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set data(value) {
     		throw new Error("<LineChart>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
+
+    var data = [ { date:"Jan-91",
+        Blue:"142",
+        "Light blue":"51",
+        "Long label that's awkward":"91" },
+      { date:"Jan-92",
+        Blue:"146",
+        "Light blue":"39",
+        "Long label that's awkward":"96" },
+      { date:"Jan-93",
+        Blue:"141",
+        "Light blue":"40",
+        "Long label that's awkward":"85" },
+      { date:"Jan-94",
+        Blue:"112",
+        "Light blue":"46",
+        "Long label that's awkward":"80" },
+      { date:"Jan-95",
+        Blue:"130",
+        "Light blue":"38",
+        "Long label that's awkward":"69" },
+      { date:"Jan-96",
+        Blue:"141",
+        "Light blue":"50",
+        "Long label that's awkward":"73" },
+      { date:"Jan-97",
+        Blue:"140",
+        "Light blue":"51",
+        "Long label that's awkward":"null" },
+      { date:"Jan-98",
+        Blue:"121",
+        "Light blue":"52",
+        "Long label that's awkward":"null" },
+      { date:"Jan-99",
+        Blue:"133",
+        "Light blue":"57",
+        "Long label that's awkward":"null" },
+      { date:"Jan-00",
+        Blue:"151",
+        "Light blue":"55",
+        "Long label that's awkward":"null" },
+      { date:"Jan-01",
+        Blue:"150",
+        "Light blue":"50",
+        "Long label that's awkward":"null" },
+      { date:"Jan-02",
+        Blue:"172",
+        "Light blue":"54",
+        "Long label that's awkward":"null" },
+      { date:"Jan-03",
+        Blue:"184",
+        "Light blue":"47",
+        "Long label that's awkward":"null" },
+      { date:"Jan-04",
+        Blue:"189",
+        "Light blue":"45",
+        "Long label that's awkward":"109" },
+      { date:"Jan-05",
+        Blue:"175",
+        "Light blue":"56",
+        "Long label that's awkward":"129" },
+      { date:"Jan-06",
+        Blue:"200",
+        "Light blue":"63",
+        "Long label that's awkward":"135" },
+      { date:"Jan-07",
+        Blue:"158",
+        "Light blue":"66",
+        "Long label that's awkward":"117" },
+      { date:"Jan-08",
+        Blue:"159",
+        "Light blue":"126",
+        "Long label that's awkward":"142" },
+      { date:"Jan-09",
+        Blue:"130",
+        "Light blue":"104",
+        "Long label that's awkward":"134" },
+      { date:"Jan-10",
+        Blue:"125",
+        "Light blue":"92",
+        "Long label that's awkward":"122" },
+      { date:"Jan-11",
+        Blue:"133",
+        "Light blue":"92",
+        "Long label that's awkward":"126" },
+      { date:"Jan-12",
+        Blue:"131",
+        "Light blue":"75",
+        "Long label that's awkward":"115" },
+      { date:"Jan-13",
+        Blue:"125",
+        "Light blue":"78",
+        "Long label that's awkward":"114" },
+      { date:"Jan-14",
+        Blue:"128",
+        "Light blue":"86",
+        "Long label that's awkward":"105" },
+      { date:"Jan-15",
+        Blue:"132",
+        "Light blue":"86",
+        "Long label that's awkward":"88" } ];
+
+    var config = {
+            "config0": {
+                    "essential": {
+                            "screenreadertext": "", //will replace default screenreader text - use if fuller description needed
+                            "dateFormat": "%b-%y",
+                            "legendStyle": "line",
+                            "directLabeling": true,
+                            "directLabelingAdjust": [{ "x": 0, "y": 0 }, { "x": 0, "y": 7 }, { "x": 0, "y": -43 }],
+                            "colour_palette": ["#206095", "#27A0CC", "#003C57", "#118C7B", "#A8BD3A", "#871A5B", "#F66068", "#746CB1", "#22D0B6"],
+                            // for darker text required by accessibility rules on colour contrast
+                            "colour_palette_labels": ["#206095", "#057FAC", "#003C57", "#118C7B", "#8A9B2E", "#871A5B", "#F66068", "#746CB1", "#1AA590"],
+                            "sourceText": ["Office for National Statistics"],
+                            "sourceURL": ["http://www.ons.gov.uk"],
+                            "draggable": false,
+                            "annotationsChart": [
+                                    // {
+                                    //   "xVal": "2003-06-23T00:00:00.000Z",
+                                    //   "yVal": 160,
+                                    //   "path": "",
+                                    //   "text": "Lorem ipsum dolor sit amet, consectetur",
+                                    //   "textOffset": [0,0]
+                                    // },
+                                    //
+                                    // {
+                                    //   "xVal": "1995-06-23T00:00:00.000Z",
+                                    //   "yVal": 120,
+                                    //   "path": "",
+                                    //   "text": "adipiscing elit, sed do eiusmod",
+                                    //   "textOffset": [0,0]
+                                    // },
+                                    //
+                                    // {
+                                    //   "xVal": "2011-06-01T00:00:00.000Z",
+                                    //   "yVal": 60,
+                                    //   "path": "",
+                                    //   "text": "incididunt ut labore et dolor",
+                                    //   "textOffset": [0,0]
+                                    // }
+                            ],
+
+                            "wordwrap": [30, 20, 10],
+                            "annoAlign": ["middle", "middle", "end"],
+                            "annotationBullet": [/*"An annotation","Another annotation"*/],
+
+                            "circles": false,
+                            // "annotationCXCY":[
+                            //     ["Jan-93","68.4"],
+                            //     ["Jan-08","73"]
+                            // ],
+                            //"annotationColour": ["green"],
+
+                            "yAxisLabel": "%",
+                            "yAxisScale": "auto_zero_max", //Options: auto_min_max, auto_zero_max, or specify array eg [-20,100]
+                            "yAxisBreak": false,
+                            "yAxisBreak_sm_md_lg": [65, 65, 65]
+                    },
+
+                    "optional": {
+                            "margin_sm": [30, 10, 25, 35], //[top,right,bottom,left]
+                            "margin_md": [30, 82, 25, 35],
+                            "margin_lg": [10, 82, 25, 35],
+
+                            "aspectRatio_sm": [16, 13],
+                            "aspectRatio_md": [16, 12],
+                            "aspectRatio_lg": [16, 10],
+
+                            "mobileBreakpoint": 414,
+
+                            "xAxisTextFormat_sm_md_lg": ["%y", "%Y", "%b %y"],
+
+                            "x_num_ticks_sm_md_lg": [6, 9, 9],
+                            "y_num_ticks_sm_md_lg": [5, 11, 11],
+
+                            "lineMarkers": true,
+
+                            "vertical_line": true,
+                            "annotateLineX1_Y1_X2_Y2": [/* [["Jul-00", "200"],["Jul-00", "0"]], [["Jul-08", "100"],["Jul-08", "200"]] */],
+
+                            "annotateRect": true,
+                            "annotateRectX_Y": [/* [["Jan-94", 200],["Jan-96", 0]], [["Jul-04", 180],["Jul-06", 40]]*/],
+                            "lineColor_opcty": [["#ABCDEF", 0.2], ["#888", 0.4]],
+
+                            "centre_line": false,
+                            "centre_line_value": 25
+                    }
+            },
+            "config1": {
+                    "essential": {
+                            "screenreadertext": "", //will replace default screenreader text - use if fuller description needed
+                            "dateFormat": "%b-%y",
+                            "legendStyle": "line",
+                            "directLabeling": true,
+                            "directLabelingAdjust": [{ "x": 0, "y": 0 }, { "x": 0, "y": 7 }, { "x": 0, "y": -43 }],
+                            "colour_palette": ["red", "green", "blue", "#118C7B", "#A8BD3A", "#871A5B", "#F66068", "#746CB1", "#22D0B6"],
+                            // for darker text required by accessibility rules on colour contrast
+                            "colour_palette_labels": ["red", "green", "blue", "#118C7B", "#8A9B2E", "#871A5B", "#F66068", "#746CB1", "#1AA590"],
+                            "sourceText": ["Office for National Statistics"],
+                            "sourceURL": ["http://www.ons.gov.uk"],
+                            "draggable": false,
+                            "annotationsChart": [
+                                    // {
+                                    //   "xVal": "2003-06-23T00:00:00.000Z",
+                                    //   "yVal": 160,
+                                    //   "path": "",
+                                    //   "text": "Lorem ipsum dolor sit amet, consectetur",
+                                    //   "textOffset": [0,0]
+                                    // },
+                                    //
+                                    // {
+                                    //   "xVal": "1995-06-23T00:00:00.000Z",
+                                    //   "yVal": 120,
+                                    //   "path": "",
+                                    //   "text": "adipiscing elit, sed do eiusmod",
+                                    //   "textOffset": [0,0]
+                                    // },
+                                    //
+                                    // {
+                                    //   "xVal": "2011-06-01T00:00:00.000Z",
+                                    //   "yVal": 60,
+                                    //   "path": "",
+                                    //   "text": "incididunt ut labore et dolor",
+                                    //   "textOffset": [0,0]
+                                    // }
+                            ],
+
+                            "wordwrap": [30, 20, 10],
+                            "annoAlign": ["middle", "middle", "end"],
+                            "annotationBullet": [/*"An annotation","Another annotation"*/],
+
+                            "circles": false,
+                            // "annotationCXCY":[
+                            //     ["Jan-93","68.4"],
+                            //     ["Jan-08","73"]
+                            // ],
+                            //"annotationColour": ["green"],
+
+                            "yAxisLabel": "%",
+                            "yAxisScale": "auto_zero_max", //Options: auto_min_max, auto_zero_max, or specify array eg [-20,100]
+                            "yAxisBreak": false,
+                            "yAxisBreak_sm_md_lg": [65, 65, 65]
+                    },
+
+                    "optional": {
+                            "margin_sm": [30, 10, 25, 35], //[top,right,bottom,left]
+                            "margin_md": [30, 82, 25, 35],
+                            "margin_lg": [10, 82, 25, 35],
+
+                            "aspectRatio_sm": [16, 13],
+                            "aspectRatio_md": [16, 12],
+                            "aspectRatio_lg": [16, 10],
+
+                            "mobileBreakpoint": 414,
+
+                            "xAxisTextFormat_sm_md_lg": ["%y", "%Y", "%b %y"],
+
+                            "x_num_ticks_sm_md_lg": [6, 9, 9],
+                            "y_num_ticks_sm_md_lg": [5, 11, 11],
+
+                            "lineMarkers": true,
+
+                            "vertical_line": true,
+                            "annotateLineX1_Y1_X2_Y2": [/* [["Jul-00", "200"],["Jul-00", "0"]], [["Jul-08", "100"],["Jul-08", "200"]] */],
+
+                            "annotateRect": true,
+                            "annotateRectX_Y": [/* [["Jan-94", 200],["Jan-96", 0]], [["Jul-04", 180],["Jul-06", 40]]*/],
+                            "lineColor_opcty": [["#ABCDEF", 0.2], ["#888", 0.4]],
+
+                            "centre_line": false,
+                            "centre_line_value": 25
+                    }
+            }
+    };
 
     /* src/App.svelte generated by Svelte v3.38.2 */
     const file = "src/App.svelte";
@@ -21270,12 +21380,12 @@ var app = (function () {
     	let current;
 
     	linechart0 = new LineChart({
-    			props: { configName: /*config0*/ ctx[0] },
+    			props: { data, dvc: config.config0 },
     			$$inline: true
     		});
 
     	linechart1 = new LineChart({
-    			props: { configName: /*config1*/ ctx[1] },
+    			props: { data, dvc: config.config1 },
     			$$inline: true
     		});
 
@@ -21294,10 +21404,10 @@ var app = (function () {
     			create_component(linechart0.$$.fragment);
     			t6 = space();
     			create_component(linechart1.$$.fragment);
-    			add_location(p0, file, 7, 4, 129);
-    			add_location(p1, file, 13, 4, 408);
-    			add_location(p2, file, 19, 4, 716);
-    			add_location(div, file, 6, 0, 119);
+    			add_location(p0, file, 8, 4, 173);
+    			add_location(p1, file, 14, 4, 452);
+    			add_location(p2, file, 20, 4, 760);
+    			add_location(div, file, 7, 0, 163);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21350,26 +21460,14 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-    	let config0 = "config0";
-    	let config1 = "config1";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ LineChart, config0, config1 });
-
-    	$$self.$inject_state = $$props => {
-    		if ("config0" in $$props) $$invalidate(0, config0 = $$props.config0);
-    		if ("config1" in $$props) $$invalidate(1, config1 = $$props.config1);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [config0, config1];
+    	$$self.$capture_state = () => ({ LineChart, data, config, d3 });
+    	return [];
     }
 
     class App extends SvelteComponentDev {

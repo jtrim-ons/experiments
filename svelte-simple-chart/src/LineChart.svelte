@@ -3,21 +3,27 @@
     import * as d3 from "d3";
     import wordwrap from "./wordwrap.js";
     import swoopyDrag from "./swoopydrag.js";
-    import config from "./config.js";
     var graphicNode;
     var keypoints;
     let graphic_data;
     let windowWidth;
 
-    export let configName;
+    export let dvc;
+    export let data;
 
-    let dvc = config[configName];
+    let mounted = false;
+
+    graphic_data = data.map(d => Object.assign({}, d));
+
+    graphic_data.forEach(function (d) {
+        d.date = d3.timeParse(dvc.essential.dateFormat)(d.date);
+    });
 
     // redraw the graphic if the window is resized
-    $: windowWidth, drawGraphic();
+    $: windowWidth && drawGraphic();
 
     function drawGraphic() {
-        if (!graphic_data)
+        if (!mounted) // don't draw graphic until page is loaded
             return;
         let graphic = d3.select(graphicNode);
         let graphicWidth = parseInt(graphic.style("width"));
@@ -688,17 +694,9 @@
     }
 
     onMount(async () => {
-        //load chart data
+        mounted = true;
         keypoints = d3.select("#keypoints");
-        d3.csv(dvc.essential.graphic_data_url).then(function (data) {
-            graphic_data = data;
-
-            graphic_data.forEach(function (d) {
-                d.date = d3.timeParse(dvc.essential.dateFormat)(d.date);
-            });
-
-            drawGraphic();
-        });
+        drawGraphic();
     });
 </script>
 

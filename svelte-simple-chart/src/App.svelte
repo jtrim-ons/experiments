@@ -1,7 +1,8 @@
 <script>
-  import LineChart from "./LineChart.svelte"
-  let config0 = "config0";
-  let config1 = "config1";
+  import LineChart from "./LineChart.svelte";
+  import data from "./data.csv";
+  import config from "./config.js";
+  import * as d3 from "d3";
 </script>
 
 <div>
@@ -23,5 +24,5 @@
     </p>
 </div>
 
-<LineChart configName={config0}/>
-<LineChart configName={config1}/>
+<LineChart data={data} dvc={config.config0}/>
+<LineChart data={data} dvc={config.config1}/>
