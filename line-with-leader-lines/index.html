@@ -637,36 +637,50 @@ function createLegend(){
         addLine(x2, x2, y1, y2);
         addLine(x2, x3, y2, y2);
       }
-			function drawSteppedLines(leaderLines) {
-				leaderLines = leaderLines.concat().sort(function(a, b) {return a.y2 - b.y2});
-				for (var i=0; i<leaderLines.length; i++) {
-					var sl = leaderLines[i];
-					var run = [sl];
-					var prevMaxY = Math.max(sl.y1, sl.y2);
-					if (sl.y1 != sl.y2) {
-						while (i < leaderLines.length - 1) {
-						  var sl_ = leaderLines[i + 1];
-							if (sl_.y1 == sl_.y2 ||
-							    (sl.y1 - sl.y2 < 0) != (sl_.y1 - sl_.y2 < 0) ||
-									Math.min(sl_.y1, sl_.y2) > prevMaxY + 2)
-								break;
-							run.push(sl_);
-							prevMaxY = Math.max(sl_.y1, sl_.y2);
-							i++;
-						}
-					}
-					if (sl.y1 < sl.y2)
-						run.reverse()
-					for (var j=0; j<run.length; j++) { var sl_ = run[j];
-						var x2 = sl_.x3 - 6;
-						if (run.length > 1) {
-							var verticalLineWidth = Math.min((run.length - 1) * 3, 7);
-						  x2 = x2 + verticalLineWidth * j / (run.length - 1) - verticalLineWidth / 2;
-						}
-						addSteppedLine(svg, sl_.x1, x2, sl_.x3, sl_.y1, sl_.y2);
-				  }
-				}
-			}
+        function getSteppedLinePositions(leaderLines) {
+            let steppedLinePositions = [];
+            leaderLines = leaderLines.concat().sort(function(a, b) {return a.y2 - b.y2});
+            for (var i=0; i<leaderLines.length; i++) {
+                var sl = leaderLines[i];
+                var run = [sl];
+                var prevMaxY = Math.max(sl.y1, sl.y2);
+                if (sl.y1 != sl.y2) {
+                    while (i < leaderLines.length - 1) {
+                      var sl_ = leaderLines[i + 1];
+                        if (sl_.y1 == sl_.y2 ||
+                            (sl.y1 - sl.y2 < 0) != (sl_.y1 - sl_.y2 < 0) ||
+                                Math.min(sl_.y1, sl_.y2) > prevMaxY + 2)
+                            break;
+                        run.push(sl_);
+                        prevMaxY = Math.max(sl_.y1, sl_.y2);
+                        i++;
+                    }
+                }
+                if (sl.y1 < sl.y2)
+                    run.reverse()
+                for (var j=0; j<run.length; j++) { var sl_ = run[j];
+                    var x2 = sl_.x3 - 6;
+                    if (run.length > 1) {
+                        var verticalLineWidth = Math.min((run.length - 1) * 3, 7);
+                      x2 = x2 + verticalLineWidth * j / (run.length - 1) - verticalLineWidth / 2;
+                    }
+                    steppedLinePositions.push({
+                        x1: sl_.x1,
+                        x2: x2,
+                        x3: sl_.x3,
+                        y1: sl_.y1,
+                        y2: sl_.y2
+                    });
+              }
+            }
+            return steppedLinePositions;
+        }
+
+        function drawSteppedLines(steppedLinePositions) {
+            for ({x1, x2, x3, y1, y2} of steppedLinePositions) {
+                addSteppedLine(svg, x1, x2, x3, y1, y2);
+            }
+        }
       function createLineLabels(){
 				var leaderLines = [];
         for (var column in graphic_data[0]) {
@@ -693,7 +707,7 @@ function createLegend(){
 						leaderLines.push({x1:x1, x3:x3, y1:last_point_ycoord, y2:labelY});
 					}
         } // end for loop running through data columns
-				drawSteppedLines(leaderLines);
+				drawSteppedLines(getSteppedLinePositions(leaderLines));
       } // end function createLineLabels()
 
       function wrap(text, width) {
