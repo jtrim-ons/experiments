@@ -34,8 +34,8 @@ def make_jsonstat(df, labels):
         for col, sz in reversed(list(zip(result["id"], result["size"]))):
             index = result["dimension"][col]["category"]["index"][getattr(row, col)]
             value_index += index * m
-            result["value"][value_index] = getattr(row, value_col)
             m *= sz
+        result["value"][value_index] = getattr(row, value_col)
 
     return result
 
